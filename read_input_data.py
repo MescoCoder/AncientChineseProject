@@ -5,19 +5,19 @@ import numpy as np
 import pandas as pd
 from keras.preprocessing.sequence import pad_sequences
 
-root_file = "......"
+root_file = "......" # the path of root directory 
 cmag_config = pd.read_pickle(open(os.path.join(root_file, "CMAG", "data_cmag_config.pkl", "rb"))
 maxlen = cmag_config['maxlen'] # the maximum length of all the sentences
 label2id = cmag_config['label2id'] # a dictionary for the entity tag schema
 
-data_train = joblib.load(open(os.path.join(root_file,"CMAG", "data_cmag_train.pkl", "rb" ))
-data_dev = joblib.load(open(os.path.join(root_file,"CMAG", "data_cmag_dev.pkl", "rb" ))
+data_train = joblib.load(open(os.path.join(root_file,"CMAG", "data_cmag_train.pkl", "rb" )) # training data
+data_dev = joblib.load(open(os.path.join(root_file,"CMAG", "data_cmag_dev.pkl", "rb" )) # development data
 # for training and parameter adjustment
 data_train = data_generator(data_train, .....)
 data_dev = data_generator(data_dev, .....)
 
 # for evaluation
-data_test = joblib.load(open(os.path.join(root_file,"dataset", "data_cmag_test.pkl", "rb" ))
+data_test = joblib.load(open(os.path.join(root_file,"dataset", "data_cmag_test.pkl", "rb" )) # test data
 
 '''
     Function: a data generator for the training of large batches of data streams
