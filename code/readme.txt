@@ -1,0 +1,1 @@
+This core code for DAL(Deep active learning)+DA(data augumentation) learning 
